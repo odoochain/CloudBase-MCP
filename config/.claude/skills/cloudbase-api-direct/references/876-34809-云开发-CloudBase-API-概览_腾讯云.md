@@ -2,7 +2,7 @@
 
 ## API 概览
 
-最近更新时间：2026-05-29 02:51:02
+最近更新时间：2026-08-28 01:53:20
 
 -   微信扫一扫 
 -   QQ
@@ -19,10 +19,13 @@ _我的收藏_
 -   [环境相关接口](#.E7.8E.AF.E5.A2.83.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "环境相关接口")
 -   [用户权限相关接口](#.E7.94.A8.E6.88.B7.E6.9D.83.E9.99.90.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "用户权限相关接口")
 -   [云托管相关接口](#.E4.BA.91.E6.89.98.E7.AE.A1.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "云托管相关接口")
+-   [计费相关接口](#.E8.AE.A1.E8.B4.B9.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "计费相关接口")
 -   [其他接口](#.E5.85.B6.E4.BB.96.E6.8E.A5.E5.8F.A3 "其他接口")
 -   [服务操作相关接口](#.E6.9C.8D.E5.8A.A1.E6.93.8D.E4.BD.9C.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "服务操作相关接口")
 -   [文档型云数据库相关接口](#.E6.96.87.E6.A1.A3.E5.9E.8B.E4.BA.91.E6.95.B0.E6.8D.AE.E5.BA.93.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "文档型云数据库相关接口")
+-   [云项目相关接口](#.E4.BA.91.E9.A1.B9.E7.9B.AE.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "云项目相关接口")
 -   [云开发接入相关接口](#.E4.BA.91.E5.BC.80.E5.8F.91.E6.8E.A5.E5.85.A5.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "云开发接入相关接口")
+-   [tcb相关接口](#tcb.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "tcb相关接口")
 -   [AI模型相关接口](#AI.E6.A8.A1.E5.9E.8B.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "AI模型相关接口")
 -   [云服务器相关接口](#.E4.BA.91.E6.9C.8D.E5.8A.A1.E5.99.A8.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "云服务器相关接口")
 -   [搜索日志相关接口](#.E6.90.9C.E7.B4.A2.E6.97.A5.E5.BF.97.E7.9B.B8.E5.85.B3.E6.8E.A5.E5.8F.A3 "搜索日志相关接口")
@@ -46,9 +49,6 @@ _我的收藏_
 | [DescribeAuthDomains](/document/api/876/42151) | 获取安全域名列表 | 20 |
 | [CreateAuthDomain](/document/api/876/42764) | 增加安全域名 | 20 |
 | [ModifyEnv](/document/api/876/34818) | 更新环境信息 | 50 |
-| [CreateEnv](/document/api/876/128592) | 创建环境 | 20 |
-| [ModifyEnvPlan](/document/api/876/128591) | 更新云开发环境套餐 | 20 |
-| [RenewEnv](/document/api/876/128590) | 续费云开发环境 | 20 |
 | [CreateHostingDomain](/document/api/876/42153) | 创建托管域名 | 20 |
 | [DestroyStaticStore](/document/api/876/42148) | 销毁静态托管资源 | 20 |
 | [DescribeEnvLimit](/document/api/876/42146) | 查询环境个数上限接口 | 20 |
@@ -80,6 +80,17 @@ _我的收藏_
 | [DescribeCloudBaseRunServerVersion](/document/api/876/49739) | 查询云托管服务版本的详情 | 1000 |
 | [DescribeCloudBaseBuildService](/document/api/876/48345) | 获取云托管代码上传和下载url | 20 |
 
+## 计费相关接口
+
+| 接口名称 | 接口功能 | 频率限制（次/秒） |
+| --- | --- | --- |
+| [CreateEnv](/document/api/876/128592) | 创建环境 | 20 |
+| [ModifyEnvPlan](/document/api/876/128591) | 更新云开发环境套餐 | 20 |
+| [RenewEnv](/document/api/876/128590) | 续费云开发环境 | 20 |
+| [DescribeCreditsUsage](/document/api/876/132935) | 获取资源点用量 | 20 |
+| [DescribeCreditsUsageDetail](/document/api/876/132934) | 获取资源点用量明细 | 20 |
+| [DescribeEnvPlans](/document/api/876/133103) | 查询环境套餐信息 | 20 |
+
 ## 其他接口
 
 | 接口名称 | 接口功能 | 频率限制（次/秒） |
@@ -88,12 +99,13 @@ _我的收藏_
 | [ModifyClsTopic](/document/api/876/81547) | 修改日志主题 | 20 |
 | [DescribeCurveData](/document/api/876/129258) | 查询环境监控曲线 | 100 |
 | [DeleteAuthDomain](/document/api/876/128960) | 删除合法域名 | 20 |
+| [DescribeCloudBaseRunBuildLog](/document/api/876/135707) | 查询构建日志 | 20 |
 
 ## 服务操作相关接口
 
 | 接口名称 | 接口功能 | 频率限制（次/秒） |
 | --- | --- | --- |
-| [ModifySafeRule](/document/api/876/128959) | 设置数据库安全规则 | 20 |
+| [ModifySafeRule](/document/api/876/128959) | 设置数据库安全规则 | \- |
 
 ## 文档型云数据库相关接口
 
@@ -109,14 +121,34 @@ _我的收藏_
 | [UpdateTable](/document/api/876/127964) | 修改文档型数据库表索引信息 | 20 |
 | [RunCommands](/document/api/876/129012) | 执行文档型数据库命令 | 1000 |
 
+## 云项目相关接口
+
+| 接口名称 | 接口功能 | 频率限制（次/秒） |
+| --- | --- | --- |
+| [DescribeCloudAppCosInfo](/document/api/876/135278) | 获取云应用cos信息 | 20 |
+| [CreateCloudApp](/document/api/876/135281) | 创建云应用 | 20 |
+| [DeleteCloudApp](/document/api/876/135280) | 删除云应用服务 | 20 |
+| [DeleteCloudAppVersion](/document/api/876/135279) | 删除云应用服务版本 | 20 |
+| [DescribeCloudAppInfo](/document/api/876/135277) | 查询云应用服务信息 | 20 |
+| [DescribeCloudAppList](/document/api/876/132936) | 查询云应用服务列表 | 20 |
+| [DescribeCloudAppVersion](/document/api/876/135276) | 查询云应用服务版本信息 | 20 |
+| [DescribeCloudAppVersionList](/document/api/876/135275) | 查询云应用服务版本列表 | 20 |
+
 ## 云开发接入相关接口
 
 | 接口名称 | 接口功能 | 频率限制（次/秒） |
 | --- | --- | --- |
 | [CreateHTTPServiceRoute](/document/api/876/129800) | 创建HTTP访问服务路由 | 20 |
+| [VerifyHTTPServiceRoute](/document/api/876/135630) | 校验HTTP访问服务路由 | 20 |
 | [DeleteHTTPServiceRoute](/document/api/876/129799) | 删除HTTP访问服务路由 | 20 |
 | [DescribeHTTPServiceRoute](/document/api/876/129798) | 查询HTTP访问服务路由信息 | 20 |
 | [ModifyHTTPServiceRoute](/document/api/876/129797) | 修改HTTP访问服务路由 | 20 |
+
+## tcb相关接口
+
+| 接口名称 | 接口功能 | 频率限制（次/秒） |
+| --- | --- | --- |
+| [ModifyEnvExtra](/document/api/876/137192) | 修改环境额外配置 | 20 |
 
 ## AI模型相关接口
 
@@ -142,6 +174,7 @@ _我的收藏_
 
 | 接口名称 | 接口功能 | 频率限制（次/秒） |
 | --- | --- | --- |
+| [BindCls](/document/api/876/136527) | 绑定用户自定义CLS日志主题 | 20 |
 | [SearchClsLog](/document/api/876/128127) | 搜索CLS日志 | 20 |
 
 ## SQL型云数据库相关接口
@@ -154,7 +187,6 @@ _我的收藏_
 | [PreviewPGUserMigrations](/document/api/876/132260) | 预览SQL migrations 在远端的执行计划，不实际执行 SQL | 20 |
 | [PushPGUserMigrations](/document/api/876/132259) | 批量应用 Migrations | 20 |
 | [RepairPGUserMigrationHistory](/document/api/876/132258) | 修复Migration History | 20 |
-| [RollbackPGUserMigrations](/document/api/876/132257) | 回滚 Migration | 20 |
 | [DescribeCreateMySQLResult](/document/api/876/128185) | 开通 MySql 结果查询 | 20 |
 | [DescribeMySQLClusterDetail](/document/api/876/128184) | 查询Mysql集群信息 | 20 |
 | [DescribeMySQLTaskStatus](/document/api/876/128183) | 销毁Mysql结果查询 | 20 |

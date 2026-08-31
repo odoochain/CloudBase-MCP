@@ -2,7 +2,7 @@
 
 ## 获取环境列表
 
-最近更新时间：2026-05-25 02:38:06
+最近更新时间：2026-07-28 03:22:27
 
 -   微信扫一扫 
 -   QQ
@@ -211,8 +211,7 @@ X-TC-Action: DescribeEnvs
                         "InstanceName": "postgres-4**0*5*g",
                         "Name": "postgres",
                         "Region": "ap-shanghai",
-                        "Status": 1,
-                        "Version": "17.6"
+                        "Status": 1
                     }
                 ],
                 "Region": "ap-shanghai",
@@ -292,7 +291,7 @@ X-TC-Action: DescribeEnvs
 | --- | --- |
 | AuthFailure.UnauthorizedOperation | 您没有查看该资源的权限。 |
 | InternalError | 内部错误。 |
-| InvalidParameter | 参数错误。 |
+| InvalidParameter | 参数格式或类型错误，如 Uin、EnvId、Domain 缺失或非法。 |
 | InvalidParameter.Action | 接口名非法。 |
 | InvalidParameter.EnvId | 环境ID非法。 |
 | MissingParameter | 缺少参数错误。 |

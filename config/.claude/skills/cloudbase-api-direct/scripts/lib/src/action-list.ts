@@ -4,19 +4,21 @@
  *
  * ⚠️ 请勿手动编辑此文件，由 scripts/generate-actionlist.ts 自动生成
  *
- * Action 数量: 90
+ * Action 数量: 104
  */
 
 const TCB_ALLOWED_ACTIONS: string[] = [
   'AddProvider',
   'AllocateEnv',
   'AssumeRoleForAllocatedEnv',
+  'BindCls',
   'BindStorageSource',
   'CheckTcbService',
   'CreateAIModel',
   'CreateApiKey',
   'CreateAuthDomain',
   'CreateBillDeal',
+  'CreateCloudApp',
   'CreateCustomLoginKey',
   'CreateEnv',
   'CreateEnvResource',
@@ -30,6 +32,8 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'DeleteAIModel',
   'DeleteApiKey',
   'DeleteAuthDomain',
+  'DeleteCloudApp',
+  'DeleteCloudAppVersion',
   'DeleteHTTPServiceRoute',
   'DeleteProvider',
   'DeleteTable',
@@ -41,13 +45,22 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'DescribeBaasPackageList',
   'DescribeBillingInfo',
   'DescribeClient',
+  'DescribeCloudAppCosInfo',
+  'DescribeCloudAppInfo',
+  'DescribeCloudAppList',
+  'DescribeCloudAppVersion',
+  'DescribeCloudAppVersionList',
   'DescribeCloudBaseBuildService',
+  'DescribeCloudBaseRunBuildLog',
   'DescribeCloudBaseRunServerVersion',
   'DescribeCreateMySQLResult',
+  'DescribeCreditsUsage',
+  'DescribeCreditsUsageDetail',
   'DescribeCurveData',
   'DescribeDatabaseACL',
   'DescribeEnvAccountCircle',
   'DescribeEnvLimit',
+  'DescribeEnvPlans',
   'DescribeEnvs',
   'DescribeGatewayVersions',
   'DescribeHTTPServiceRoute',
@@ -78,6 +91,7 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'ModifyClsTopic',
   'ModifyDatabaseACL',
   'ModifyEnv',
+  'ModifyEnvExtra',
   'ModifyEnvPlan',
   'ModifyHTTPServiceRoute',
   'ModifyLoginConfig',
@@ -91,13 +105,13 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'ReleaseEnv',
   'RenewEnv',
   'RepairPGUserMigrationHistory',
-  'RollbackPGUserMigrations',
   'RunCommands',
   'RunSql',
   'SearchClsLog',
   'UnbindStorageSource',
   'UpdateAIModel',
   'UpdateTable',
+  'VerifyHTTPServiceRoute',
 ];
 
 export default TCB_ALLOWED_ACTIONS;

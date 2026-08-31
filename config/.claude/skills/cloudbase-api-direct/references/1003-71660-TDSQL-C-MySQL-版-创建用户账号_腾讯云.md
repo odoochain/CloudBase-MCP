@@ -1,6 +1,6 @@
 ## 创建用户账号
 
-最近更新时间：2025-09-12 01:52:52
+最近更新时间：2026-08-04 01:42:26
 
 -   微信扫一扫 
 -   QQ
@@ -35,14 +35,26 @@ API Explorer 提供了在线调用、签名验证、SDK 代码生成和快速检
 | Action | 是 | String | [公共参数](/document/api/1003/48100) ，本接口取值：CreateAccounts。 |
 | Version | 是 | String | [公共参数](/document/api/1003/48100) ，本接口取值：2019-01-07。 |
 | Region | 是 | String | [公共参数](/document/api/1003/48100) ，详见产品支持的 [地域列表](/document/api/1003/48100#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) ，本接口仅支持其中的: ap-bangkok, ap-beijing, ap-chengdu, ap-chongqing, ap-guangzhou, ap-hongkong, ap-jakarta, ap-nanjing, ap-seoul, ap-shanghai, ap-shenzhen-fsi, ap-singapore, ap-tokyo, eu-frankfurt, na-ashburn, na-siliconvalley, sa-saopaulo 。 |
-| ClusterId | 是 | String | 集群id  
+| ClusterId | 是 | String | 
+集群id
+
+  
 示例值：cynosdbmysql-asd45wwe |
-| Accounts.N | 是 | Array of [NewAccount](/document/api/1003/48097#NewAccount) | 新账户列表 |
+| Accounts.N | 是 | Array of [NewAccount](/document/api/1003/48097#NewAccount) | 
+
+新账户列表
+
+ |
 
 ## 3\. 输出参数
 
 | 参数名称 | 类型 | 描述 |
 | --- | --- | --- |
+| TaskId | Integer | 
+任务 ID
+
+  
+示例值：123 |
 | RequestId | String | 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 |
 
 ## 4\. 示例
