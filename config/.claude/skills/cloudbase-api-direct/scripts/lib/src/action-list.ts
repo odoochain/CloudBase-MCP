@@ -4,7 +4,7 @@
  *
  * ⚠️ 请勿手动编辑此文件，由 scripts/generate-actionlist.ts 自动生成
  *
- * Action 数量: 104
+ * Action 数量: 105
  */
 
 const TCB_ALLOWED_ACTIONS: string[] = [
@@ -95,6 +95,7 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'ModifyEnvPlan',
   'ModifyHTTPServiceRoute',
   'ModifyLoginConfig',
+  'ModifyPGInstanceSpec',
   'ModifyProvider',
   'ModifyResourcePermission',
   'ModifySafeRule',
