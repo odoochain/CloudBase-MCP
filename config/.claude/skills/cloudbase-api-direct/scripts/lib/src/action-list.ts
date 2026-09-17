@@ -4,7 +4,7 @@
  *
  * ⚠️ 请勿手动编辑此文件，由 scripts/generate-actionlist.ts 自动生成
  *
- * Action 数量: 109
+ * Action 数量: 117
  */
 
 const TCB_ALLOWED_ACTIONS: string[] = [
@@ -26,6 +26,7 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'CreateHTTPServiceRoute',
   'CreateHostingDomain',
   'CreateMySQL',
+  'CreatePlatformEnv',
   'CreateStaticStore',
   'CreateTable',
   'CreateUser',
@@ -71,6 +72,11 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'DescribeMySQLClusterDetail',
   'DescribeMySQLTaskStatus',
   'DescribePGUserMigration',
+  'DescribePlatformAccountCircle',
+  'DescribePlatformCreditsUsage',
+  'DescribePlatformCreditsUsageDetail',
+  'DescribePlatformEnvUsage',
+  'DescribePlatforms',
   'DescribeQuotaData',
   'DescribeResourcePermission',
   'DescribeSafeRule',
@@ -80,6 +86,7 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'DescribeUserList',
   'DestroyEnv',
   'DestroyMySQL',
+  'DestroyPlatformEnv',
   'DestroyStaticStore',
   'DownloadFunction',
   'ExecutePGSql',
@@ -97,6 +104,7 @@ const TCB_ALLOWED_ACTIONS: string[] = [
   'ModifyHTTPServiceRoute',
   'ModifyLoginConfig',
   'ModifyPGInstanceSpec',
+  'ModifyPlatformEnv',
   'ModifyProvider',
   'ModifyResourcePermission',
   'ModifySafeRule',
